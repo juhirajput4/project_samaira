@@ -98,7 +98,7 @@ class ProviderPortal(seleniumDriver):
         self.elementClick(ProviderPortalLocators.terms_and_condition)
         time.sleep(2)
         self.waitForElement(ProviderPortalLocators.submit_testReport_button)
-        # self.elementClick(ProviderPortalLocators.submit_testReport_button)
+        self.elementClick(ProviderPortalLocators.submit_testReport_button)
 
 
 
