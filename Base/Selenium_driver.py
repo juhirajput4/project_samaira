@@ -49,6 +49,7 @@ class seleniumDriver():
         Default timeout value is 5 secs.
         """
         try:
+            self.waitForElement(locator, condition="element_to_be_clickable", timeout=timeout)
             element = self.getElement(locator)
             self.highlight_element(locator)
             element.click()
@@ -279,3 +280,34 @@ class seleniumDriver():
             element = []
         self.driver.implicitly_wait(final_implicit_wait_time)
         return element
+
+    def getText(self, locator):
+        """
+        NEW METHOD
+        Get 'Text' on an element
+        Either provide element or a combination of locator and locatorType
+        """
+        try:
+            element = self.getElement(locator)
+            self.highlight_element(locator)
+            text = element.text
+            if len(text) == 0:
+                text = element.get_attribute("innerText")
+            else:
+                self.log.info("Getting text on element :: " + locator[1])
+                self.log.info("The text is :: '" + text + "'")
+                text = text.strip()
+        except Exception as err_msg:
+            self.takeScreenshot()
+            raise AssertionError("Failed to get text on element: " + locator[1] + "\nerror:" + str(err_msg))
+        return text
+
+    def clearFieldFunction(self, locator):
+        try:
+            element = self.getElement(locator)
+            element.clear()
+            self.log.info("Cleared data on element with locator: " + locator[1])
+        except Exception as err_msg:
+            self.takeScreenshot()
+            raise AssertionError(
+                "Unable able to clear data on the element with locator: " + locator[1] + "\nError:" + str(err_msg))
