@@ -1,0 +1,15 @@
+04/28/23 10:11:58:AM: ProviderPortal: INFO: Wait for element call with the given condition (element_to_be_clickable) was not successful: (//a[@class='list-item-a customTablwc'])[2]
+04/28/23 10:11:58:AM: ProviderPortal: INFO: Element Found with locator: (//a[@class='list-item-a customTablwc'])[2]
+04/28/23 10:11:58:AM: ProviderPortal: INFO: Element Found with locator: (//a[@class='list-item-a customTablwc'])[2]
+04/28/23 10:11:59:AM: ProviderPortal: INFO: Element got highlighted with locator(//a[@class='list-item-a customTablwc'])[2]
+04/28/23 10:11:59:AM: ProviderPortal: INFO: Clicked on element with locator: (//a[@class='list-item-a customTablwc'])[2]
+04/28/23 10:12:13:AM: ProviderPortal: INFO: Element Found with locator: //select[@class='slds-select']
+04/28/23 10:12:18:AM: ProviderPortal: INFO: Element Found: ('xpath', '//tbody/tr')
+04/28/23 10:12:18:AM: ProviderPortal: INFO: Element list FOUND with locator: //tbody/tr
+04/28/23 10:12:22:AM: ProviderPortal: INFO: Wait for element call with the given condition (presence_of_element_located) was not successful: (//lightning-icon[@icon-name='utility:edit']/span/lightning-primitive-icon)[1]
+04/28/23 10:12:22:AM: ProviderPortal: INFO: Wait for element call with the given condition (element_to_be_clickable) was not successful: (//lightning-icon[@icon-name='utility:edit']/span/lightning-primitive-icon)[1]
+04/28/23 10:12:29:AM: ProviderPortal: INFO: Element Found with locator: (//lightning-icon[@icon-name='utility:edit']/span/lightning-primitive-icon)[1]
+04/28/23 10:12:29:AM: ProviderPortal: INFO: Element Found with locator: (//lightning-icon[@icon-name='utility:edit']/span/lightning-primitive-icon)[1]
+04/28/23 10:12:30:AM: ProviderPortal: INFO: Element got highlighted with locator(//lightning-icon[@icon-name='utility:edit']/span/lightning-primitive-icon)[1]
+04/28/23 10:12:30:AM: ProviderPortal: INFO: Clicked on element with locator: (//lightning-icon[@icon-name='utility:edit']/span/lightning-primitive-icon)[1]
+04/28/23 10:12:32:AM: ProviderPortal: INFO: Element Found with locator: //select[@name='sex']

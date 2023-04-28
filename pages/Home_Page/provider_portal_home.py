@@ -18,6 +18,7 @@ class ProviderPortal(seleniumDriver):
         self.driver = driver
 
     def click_unsumbitted_request(self):
+        self.takeScreenshot()
         self.elementClick(ProviderPortalLocators.unsubmitted_requests_button)
 
     def get_patients(self):
@@ -32,12 +33,14 @@ class ProviderPortal(seleniumDriver):
         dropdown_ele = self.getElement(ProviderPortalLocators.display_record_dropdown)
         sel = Select(dropdown_ele)
         sel.select_by_value("25")
+        self.takeScreenshot()
         time.sleep(5)
 
     def find_CTID_in_Table(self):
         time.sleep(10)
         self.change_dropdown()
         rows = self.get_patients()
+        self.takeScreenshot()
         for row in rows:
             test_type = row.find_element(By.XPATH,".//th[@data-label='Test Type']").text
             if test_type == RequiredTestType:
@@ -50,33 +53,39 @@ class ProviderPortal(seleniumDriver):
     def edit_form(self):
         self.waitForElement(ProviderPortalLocators.edit_button)
         self.elementClick(ProviderPortalLocators.edit_button)
+        self.takeScreenshot()
 
     def enter_dob(self, date="Apr 11, 1980"):
         self.waitForElement(ProviderPortalLocators.patient_DOB)
         self.clearFieldFunction(ProviderPortalLocators.patient_DOB)
         self.sendKeys(date, ProviderPortalLocators.patient_DOB)
+        self.takeScreenshot()
 
     def enter_last_name(self, last_name="Trey"):
         self.waitForElement(ProviderPortalLocators.patient_lastname)
         self.clearFieldFunction(ProviderPortalLocators.patient_lastname)
         self.sendKeys(last_name, ProviderPortalLocators.patient_lastname)
+        self.takeScreenshot()
 
     def enter_sex(self):
         dropdown_ele = self.getElement(ProviderPortalLocators.patient_sex)
         sel = Select(dropdown_ele)
         sel.select_by_value("Female")
+        self.takeScreenshot()
         time.sleep(5)
 
     def enter_bill_to(self):
         dropdown_ele = self.getElement(ProviderPortalLocators.bill_to)
         sel = Select(dropdown_ele)
         sel.select_by_value("Private Insurance")
+        self.takeScreenshot()
         time.sleep(5)
 
     def enter_hospital_status(self):
         dropdown_ele = self.getElement(ProviderPortalLocators.hospital_status)
         sel = Select(dropdown_ele)
         sel.select_by_value("Outpatient")
+        self.takeScreenshot()
         time.sleep(5)
 
     def press_save(self):
@@ -97,6 +106,7 @@ class ProviderPortal(seleniumDriver):
         self.waitForElement(ProviderPortalLocators.terms_and_condition)
         self.elementClick(ProviderPortalLocators.terms_and_condition)
         time.sleep(2)
+        self.takeScreenshot()
         self.waitForElement(ProviderPortalLocators.submit_testReport_button)
         self.elementClick(ProviderPortalLocators.submit_testReport_button)
 
